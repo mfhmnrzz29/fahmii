@@ -12,15 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('about');
 });
 
 Route::get('/index', function () {
     return view('about.index');
-});
-
-Route::get('/about', function () {
-    return view('about');
 });
 
 Route::get('status/{a?}',function(){
@@ -79,4 +75,8 @@ Route::get('/siswa3', function () {
 	$query->nama="Muhammad Fahmi Nur Aziz";
 	$query->save();
     return $query;
+});
+
+Route::get('cektampilan', function(){
+	return view('layouts.master');
 });
